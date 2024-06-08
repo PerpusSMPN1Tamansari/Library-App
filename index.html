@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perpustakaan SMPN 1 Tamansari Bogor</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="assets/images/logo.png" alt="Logo Perpustakaan" width="200">
+        </div>
+        <div id="login-signup">
+            <div id="login-form">
+                <h2>Login</h2>
+                <input type="text" id="login-username" placeholder="Username">
+                <input type="password" id="login-password" placeholder="Password">
+                <button onclick="login()">Login</button>
+                <p>Belum punya akun? <span onclick="showSignup()">Sign Up</span></p>
+            </div>
+            <div id="signup-form" style="display:none;">
+                <h2>Sign Up</h2>
+                <input type="text" id="signup-username" placeholder="Username">
+                <input type="password" id="signup-password" placeholder="Password">
+                <button onclick="signup()">Sign Up</button>
+                <p>Sudah punya akun? <span onclick="showLogin()">Login</span></p>
+            </div>
+        </div>
+        <div id="dashboard" style="display:none;">
+            <h1>Dashboard Perpustakaan</h1>
+            <div class="user-info">
+                <p>Selamat datang, <span id="user-name"></span></p>
+            </div>
+            <div class="menu">
+                <div onclick="showSection('visitors')">
+                    <img src="assets/images/default.png" alt="Kunjungan/Tamu" id="visitors-img">
+                    <p>Kunjungan/Tamu</p>
+                </div>
+                <div onclick="showSection('returnBook')">
+                    <img src="assets/images/default.png" alt="Pengembalian Buku" id="returnBook-img">
+                    <p>Pengembalian Buku</p>
+                </div>
+                <div onclick="showSection('borrowBook')">
+                    <img src="assets/images/default.png" alt="Peminjaman Buku" id="borrowBook-img">
+                    <p>Peminjaman Buku</p>
+                </div>
+                <div onclick="showSection('digitalCard')">
+                    <img src="assets/images/default.png" alt="Kartu Digital/Member" id="digitalCard-img">
+                    <p>Kartu Digital/Member</p>
+                </div>
+                <div onclick="showSection('bookCollection')">
+                    <img src="assets/images/default.png" alt="Koleksi Buku" id="bookCollection-img">
+                    <p>Koleksi Buku</p>
+                </div>
+                <div onclick="showSection('games')">
+                    <img src="assets/images/default.png" alt="Games" id="games-img">
+                    <p>Games</p>
+                </div>
+            </div>
+        </div>
+        <div id="content" style="display:none;">
+            <button onclick="showDashboard()">Kembali ke Dashboard</button>
+            <div id="visitors" class="section" style="display:none;">
+                <h2>Kunjungan/Tamu</h2>
+                <input type="file" id="visitors-upload" accept="image/*" onchange="uploadImage('visitors')">
+                <div id="visitors-data">
+                    <!-- Data Kunjungan/Tamu -->
+                </div>
+            </div>
+            <div id="returnBook" class="section" style="display:none;">
+                <h2>Pengembalian Buku</h2>
+                <input type="file" id="returnBook-upload" accept="image/*" onchange="uploadImage('returnBook')">
+                <div id="returnBook-data">
+                    <!-- Data Pengembalian Buku -->
+                </div>
+            </div>
+            <div id="borrowBook" class="section" style="display:none;">
+                <h2>Peminjaman Buku</h2>
+                <input type="file" id="borrowBook-upload" accept="image/*" onchange="uploadImage('borrowBook')">
+                <div id="borrowBook-data">
+                    <!-- Data Peminjaman Buku -->
+                </div>
+            </div>
+            <div id="digitalCard" class="section" style="display:none;">
+                <h2>Kartu Digital/Member</h2>
+                <input type="file" id="digitalCard-upload" accept="image/*" onchange="uploadImage('digitalCard')">
+                <div id="digitalCard-data">
+                    <!-- Data Kartu Digital/Member -->
+                </div>
+            </div>
+            <div id="bookCollection" class="section" style="display:none;">
+                <h2>Koleksi Buku</h2>
+                <input type="file" id="bookCollection-upload" accept="image/*" onchange="uploadImage('bookCollection')">
+                <div id="bookCollection-data">
+                    <!-- Data Koleksi Buku -->
+                </div>
+            </div>
+            <div id="games" class="section" style="display:none;">
+                <h2>Games</h2>
+                <input type="file" id="games-upload" accept="image/*" onchange="uploadImage('games')">
+                <div id="games-data">
+                    <!-- Data Games -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/app.js"></script>
+</body>
+</html>

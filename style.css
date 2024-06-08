@@ -1,0 +1,68 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+.logo {
+    text-align: center;
+    margin-top: 20px;
+}
+.login-signup {
+    text-align: center;
+    margin-top: 50px;
+}
+.login-signup h2 {
+    margin-bottom: 20px;
+}
+.login-signup input {
+    display: block;
+    width: 80%;
+    margin: 10px auto;
+    padding: 10px;
+}
+.login-signup button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+.login-signup p {
+    margin-top: 10px;
+}
+.login-signup span {
+    color: #007BFF;
+    cursor: pointer;
+}
+#dashboard {
+    text-align: center;
+    margin-top: 50px;
+}
+.user-info {
+    margin-bottom: 20px;
+}
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.menu div {
+    margin: 10px;
+    cursor: pointer;
+    text-align: center;
+}
+.menu img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+.section {
+    margin-top: 20px;
+}
